@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven-shade-plugin.version>3.2.2</maven-shade-plugin.version>
 
-		<zeebe.version>0.25.1</zeebe.version>
+		<zeebe.version>0.26.0</zeebe.version>
 		<kafka-streams.version>2.4.0</kafka-streams.version>
 		<elasticsearch.version>7.6.0</elasticsearch.version>
 		<json.version>20190722</json.version>
@@ -35,6 +35,12 @@
 	</dependencyManagement>
 
 	<dependencies>
+                <dependency>
+                    <groupId>org.elasticsearch.client</groupId>
+                    <artifactId>elasticsearch-rest-high-level-client</artifactId>
+                    <version>${elasticsearch.version}</version>
+                </dependency>
+ 
 		<dependency>
 			<groupId>io.zeebe</groupId>
 			<artifactId>zeebe-elasticsearch-exporter</artifactId>
